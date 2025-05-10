@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import app.no.scroll.ui.components.GithubIcon
 import app.no.scroll.ui.components.HomeHeadline
+import app.no.scroll.ui.components.TogglePlatformsSection
 
 @Composable
 fun HomeScreen(context: Context) {
@@ -36,7 +37,7 @@ fun HomeScreen(context: Context) {
             verticalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxSize()
         ) {
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.weight(2f))
 
             HomeHeadline()
 
@@ -55,6 +56,11 @@ fun HomeScreen(context: Context) {
             }
 
             Spacer(modifier = Modifier.weight(1f))
+
+            TogglePlatformsSection()
+
+            Spacer(modifier = Modifier.weight(2f))
+
         }
 
         GithubIcon(

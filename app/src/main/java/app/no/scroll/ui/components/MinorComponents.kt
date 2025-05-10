@@ -23,7 +23,7 @@ fun GithubIcon(modifier: Modifier) {
         modifier = modifier.size(32.dp)
     ) {
         Icon(
-            painter = painterResource(R.drawable.github_mark_white),
+            painter = painterResource(R.drawable.ic_github),
             contentDescription = "GitHub Icon",
             tint = Color.White
         )
