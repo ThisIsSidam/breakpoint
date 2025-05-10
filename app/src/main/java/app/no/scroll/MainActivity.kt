@@ -9,7 +9,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import app.no.scroll.core.services.NoScrollAccessibilityService
-import app.no.scroll.ui.home.EnablePermissionScreen
+import app.no.scroll.ui.home.HomeScreen
 import app.no.scroll.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                EnablePermissionScreen(this)
+                HomeScreen(this)
             }
         }
     }

@@ -24,7 +24,7 @@ import app.no.scroll.ui.components.GithubIcon
 import app.no.scroll.ui.components.HomeHeadline
 
 @Composable
-fun EnablePermissionScreen(context: Context) {
+fun HomeScreen(context: Context) {
     Box(
         modifier = Modifier
             .fillMaxSize()
