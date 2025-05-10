@@ -18,30 +18,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                HomeScreen(this)
+                HomeScreen()
             }
         }
     }
 
 
 }
-
-fun isAccessibilityServiceEnabled(context: Context): Boolean {
-    val service = ComponentName(context, NoScrollAccessibilityService::class.java)
-    val enabledServicesSetting = Settings.Secure.getString(
-        context.contentResolver,
-        Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
-    ) ?: return false
-
-    val colonSplitter = TextUtils.SimpleStringSplitter(':')
-    colonSplitter.setString(enabledServicesSetting)
-
-    for (serviceString in colonSplitter) {
-        if (ComponentName.unflattenFromString(serviceString) == service) {
-            return true
-        }
-    }
-    return false
-}
-
 
