@@ -21,8 +21,9 @@ import androidx.core.content.edit
 @Composable
 fun TogglePlatformsSection(preferences: SharedPreferences) {
     val ytAllowed : Boolean = preferences.getBoolean("yt_allowed", true)
+    val instaAllowed : Boolean = preferences.getBoolean("insta_allowed", true)
     var ytEnabled by remember { mutableStateOf(ytAllowed) }
-//    var instaEnabled by remember { mutableStateOf(false) }
+    var instaEnabled by remember { mutableStateOf(instaAllowed) }
 
     Column(modifier = Modifier) {
         Spacer(modifier = Modifier.height(16.dp))
@@ -37,11 +38,14 @@ fun TogglePlatformsSection(preferences: SharedPreferences) {
             }
         )
 
-//        PlatformToggleCard(
-//            iconRes = R.drawable.ic_instagram,
-//            label = "Instagram Reels",
-//            isChecked = instaEnabled,
-//            onCheckedChange = { instaEnabled = it }
-//        )
+        PlatformToggleCard(
+            iconRes = R.drawable.ic_instagram,
+            label = "Instagram Reels",
+            isChecked = instaEnabled,
+            onCheckedChange = {
+                instaEnabled = it
+                preferences.edit { putBoolean("insta_allowed", instaEnabled) }
+            }
+        )
     }
 }
