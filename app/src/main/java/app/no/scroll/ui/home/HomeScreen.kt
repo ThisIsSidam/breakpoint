@@ -2,6 +2,7 @@ package app.no.scroll.ui.home
 
 import android.content.ComponentName
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.provider.Settings
 import android.text.TextUtils
 import androidx.compose.foundation.background
@@ -75,7 +76,7 @@ fun HomeScreen() {
             Spacer(modifier = Modifier.weight(1f))
 
             if (isServiceEnabled) {
-                TogglePlatformsSection()
+                TogglePlatformsSection(context.getSharedPreferences("app.no.scroll", MODE_PRIVATE))
             }
 
             Spacer(modifier = Modifier.weight(2f))

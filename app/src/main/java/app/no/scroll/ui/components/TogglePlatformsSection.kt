@@ -1,5 +1,7 @@
 package app.no.scroll.ui.components
 
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,10 +16,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import app.no.scroll.R
+import androidx.core.content.edit
 
 @Composable
-fun TogglePlatformsSection() {
-    var ytEnabled by remember { mutableStateOf(false) }
+fun TogglePlatformsSection(preferences: SharedPreferences) {
+    val ytAllowed : Boolean = preferences.getBoolean("yt_allowed", true)
+    var ytEnabled by remember { mutableStateOf(ytAllowed) }
 //    var instaEnabled by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier) {
@@ -27,7 +31,10 @@ fun TogglePlatformsSection() {
             iconRes = R.drawable.ic_youtube,
             label = "Youtube Shorts",
             isChecked = ytEnabled,
-            onCheckedChange = { ytEnabled = it }
+            onCheckedChange = {
+                ytEnabled = it
+                preferences.edit { putBoolean("yt_allowed", ytEnabled) }
+            }
         )
 
 //        PlatformToggleCard(
