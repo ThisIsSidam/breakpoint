@@ -1,4 +1,4 @@
-package app.no.scroll.core.exceptions
+package breakpoint.app.core.exceptions
 
 class Failure(
     override val message : String,

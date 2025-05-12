@@ -1,4 +1,4 @@
-package app.no.scroll.ui.theme
+package breakpoint.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

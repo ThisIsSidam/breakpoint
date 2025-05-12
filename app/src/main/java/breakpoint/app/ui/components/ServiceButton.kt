@@ -1,4 +1,4 @@
-package app.no.scroll.ui.components
+package breakpoint.app.ui.components
 
 import android.content.Context
 import android.content.Intent

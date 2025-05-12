@@ -1,4 +1,4 @@
-package app.no.scroll.ui.components
+package breakpoint.app.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,7 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.no.scroll.R
+import breakpoint.app.R
 
 @Composable
 fun GithubIcon(modifier: Modifier) {

@@ -1,4 +1,4 @@
-package app.no.scroll.ui.home
+package breakpoint.app.ui.home
 
 import android.content.ComponentName
 import android.content.Context
@@ -27,11 +27,11 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import app.no.scroll.core.services.NoScrollAccessibilityService
-import app.no.scroll.ui.components.GithubIcon
-import app.no.scroll.ui.components.HomeHeadline
-import app.no.scroll.ui.components.ServiceButton
-import app.no.scroll.ui.components.TogglePlatformsSection
+import breakpoint.app.core.services.NoScrollAccessibilityService
+import breakpoint.app.ui.components.GithubIcon
+import breakpoint.app.ui.components.HomeHeadline
+import breakpoint.app.ui.components.ServiceButton
+import breakpoint.app.ui.components.TogglePlatformsSection
 
 @Composable
 fun HomeScreen() {
@@ -76,7 +76,7 @@ fun HomeScreen() {
             Spacer(modifier = Modifier.weight(1f))
 
             if (isServiceEnabled) {
-                TogglePlatformsSection(context.getSharedPreferences("app.no.scroll", MODE_PRIVATE))
+                TogglePlatformsSection(context.getSharedPreferences("breakpoint.app", MODE_PRIVATE))
             }
 
             Spacer(modifier = Modifier.weight(2f))

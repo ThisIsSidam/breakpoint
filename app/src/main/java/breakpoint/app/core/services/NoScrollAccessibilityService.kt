@@ -1,11 +1,12 @@
-package app.no.scroll.core.services
+package breakpoint.app.core.services
 
 import android.accessibilityservice.AccessibilityService
 import android.content.SharedPreferences
+import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
-import app.no.scroll.core.exceptions.Failure
-import app.no.scroll.core.extensions.toast
+import breakpoint.app.core.exceptions.Failure
+import breakpoint.app.core.extensions.toast
 
 class NoScrollAccessibilityService : AccessibilityService() {
 
@@ -20,7 +21,7 @@ class NoScrollAccessibilityService : AccessibilityService() {
         }
 
         try {
-            val preferences : SharedPreferences = getSharedPreferences("app.no.scroll", MODE_PRIVATE)
+            val preferences : SharedPreferences = getSharedPreferences("breakpoint.app", MODE_PRIVATE)
             val ytAllowed : Boolean = preferences.getBoolean("yt_allowed", true)
             val instaAllowed : Boolean = preferences.getBoolean("insta_allowed", true)
             val packageName = event.packageName?.toString()
@@ -34,7 +35,7 @@ class NoScrollAccessibilityService : AccessibilityService() {
             if (e is Failure && e.showToast) {
                 toast(message = e.message.toString())
             }
-            android.util.Log.e("NoScrollService", "Failure: ${e.message}")
+            Log.e("NoScrollService", "Failure: ${e.message}")
         }
     }
 
@@ -75,7 +76,7 @@ class NoScrollAccessibilityService : AccessibilityService() {
             val layoutNode = rootNode.findAccessibilityNodeInfosByViewId("com.instagram.android:id/clips_viewer_video_layout")
             val infoNode = rootNode.findAccessibilityNodeInfosByViewId("com.instagram.android:id/clips_media_info_component")
             val overlayNode = rootNode.findAccessibilityNodeInfosByViewId("com.instagram.android:id/clips_item_overlay_component")
-            android.util.Log.d("NoScrollService", "Node: $layoutNode")
+            Log.d("NoScrollService", "Node: $layoutNode")
             if (
                 layoutNode != null && layoutNode.isNotEmpty() &&
                 infoNode != null && infoNode.isNotEmpty() &&
