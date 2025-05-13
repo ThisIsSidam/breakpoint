@@ -55,9 +55,13 @@ class NoScrollAccessibilityService : AccessibilityService() {
         if (rootNode == null) {
             throw Failure("Root node is null")
         } else {
-            val node = rootNode.findAccessibilityNodeInfosByViewId("com.google.android.youtube:id/reel_right_dyn_bar")
+            val overlayNode = rootNode.findAccessibilityNodeInfosByViewId("com.google.android.youtube:id/reel_player_overlay_container")
+            val barNode = rootNode.findAccessibilityNodeInfosByViewId("com.google.android.youtube:id/elements_button_bar_container")
 
-            if (node != null && node.isNotEmpty()) {
+            if (
+                overlayNode != null && overlayNode.isNotEmpty() &&
+                barNode != null && barNode.isNotEmpty()
+            ){
                 val homeButton = rootNode.findAccessibilityNodeInfosByText("Home")
                 if (homeButton.isNotEmpty()) {
                     tapChildOrParent(homeButton[0])
