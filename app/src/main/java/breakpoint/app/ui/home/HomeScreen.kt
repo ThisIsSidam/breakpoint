@@ -84,6 +84,7 @@ fun HomeScreen() {
         }
 
         GithubIcon(
+            context,
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .absolutePadding(right = 24.dp, top = 48.dp)

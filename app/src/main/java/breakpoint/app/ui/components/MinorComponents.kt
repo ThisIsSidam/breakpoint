@@ -1,5 +1,6 @@
 package breakpoint.app.ui.components
 
+import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
@@ -15,11 +16,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import breakpoint.app.R
+import breakpoint.app.core.utils.AppUtils
 
 @Composable
-fun GithubIcon(modifier: Modifier) {
+fun GithubIcon(context: Context, modifier: Modifier) {
     IconButton(
-        onClick = { /* TODO: Open GitHub */ },
+        onClick = {
+            AppUtils.openUrl(context, "https://github.com/ThisIsSidam/breakpoint")
+        },
         modifier = modifier.size(32.dp)
     ) {
         Icon(
