@@ -45,8 +45,10 @@ fun PlatformToggleCard(
                 checked = isChecked,
                 onCheckedChange = onCheckedChange,
                 colors = SwitchDefaults.colors(
-                    checkedThumbColor = Color.White,
-                    uncheckedThumbColor = Color.LightGray
+                    checkedThumbColor = Color(0xFF202020),
+                    uncheckedThumbColor = Color.LightGray,
+                    checkedTrackColor = Color(0xFFd2f898),
+                    uncheckedTrackColor = Color(0xFF202020),
                 )
             )
         }
