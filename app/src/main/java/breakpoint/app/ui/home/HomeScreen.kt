@@ -22,13 +22,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import breakpoint.app.core.services.NoScrollAccessibilityService
+import breakpoint.app.ui.components.AppVersionText
 import breakpoint.app.ui.components.GithubIcon
 import breakpoint.app.ui.components.HomeHeadline
 import breakpoint.app.ui.components.ServiceButton
@@ -81,7 +81,7 @@ fun HomeScreen() {
             }
 
             Spacer(modifier = Modifier.weight(2f))
-
+            AppVersionText(context)
         }
 
         GithubIcon(

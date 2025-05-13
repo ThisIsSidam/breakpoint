@@ -3,6 +3,7 @@ package breakpoint.app.ui.components
 import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -51,6 +52,24 @@ fun HomeHeadline() {
             color = MaterialTheme.colorScheme.onBackground,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
+        )
+    }
+}
+
+@Composable
+fun AppVersionText(context: Context) {
+    val versionName = try {
+        val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+        packageInfo.versionName
+    } catch (_: Exception) {
+        null
+    }
+    if (!versionName.isNullOrEmpty()) {
+        Text(
+            text = "Version: $versionName",
+            color = MaterialTheme.colorScheme.onBackground,
+            fontSize = 12.sp,
+            modifier = Modifier.padding(bottom = 24.dp)
         )
     }
 }
