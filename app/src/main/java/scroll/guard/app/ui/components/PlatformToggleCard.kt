@@ -1,4 +1,4 @@
-package breakpoint.app.ui.components
+package scroll.guard.app.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

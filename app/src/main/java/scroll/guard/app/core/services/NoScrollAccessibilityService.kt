@@ -1,12 +1,12 @@
-package breakpoint.app.core.services
+package scroll.guard.app.core.services
 
 import android.accessibilityservice.AccessibilityService
 import android.content.SharedPreferences
 import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
-import breakpoint.app.core.exceptions.Failure
-import breakpoint.app.core.extensions.toast
+import scroll.guard.app.core.exceptions.Failure
+import scroll.guard.app.core.extensions.toast
 
 class NoScrollAccessibilityService : AccessibilityService() {
 
@@ -21,7 +21,7 @@ class NoScrollAccessibilityService : AccessibilityService() {
         }
 
         try {
-            val preferences : SharedPreferences = getSharedPreferences("breakpoint.app", MODE_PRIVATE)
+            val preferences : SharedPreferences = getSharedPreferences("scroll.guard.app", MODE_PRIVATE)
             val ytAllowed : Boolean = preferences.getBoolean("yt_allowed", true)
             val instaAllowed : Boolean = preferences.getBoolean("insta_allowed", true)
             val packageName = event.packageName?.toString()

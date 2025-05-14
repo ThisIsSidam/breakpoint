@@ -1,4 +1,4 @@
-package breakpoint.app.core.extensions
+package scroll.guard.app.core.extensions
 
 import android.content.Context
 import android.widget.Toast

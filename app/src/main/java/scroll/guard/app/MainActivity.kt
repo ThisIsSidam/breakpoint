@@ -1,11 +1,11 @@
-package breakpoint.app
+package scroll.guard.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import breakpoint.app.ui.home.HomeScreen
-import breakpoint.app.ui.theme.MyApplicationTheme
+import scroll.guard.app.ui.home.HomeScreen
+import scroll.guard.app.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

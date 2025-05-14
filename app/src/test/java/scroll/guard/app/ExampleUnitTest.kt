@@ -1,4 +1,4 @@
-package breakpoint.app
+package scroll.guard.app
 
 import org.junit.Assert
 import org.junit.Test

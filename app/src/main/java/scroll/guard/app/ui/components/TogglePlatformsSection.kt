@@ -1,4 +1,4 @@
-package breakpoint.app.ui.components
+package scroll.guard.app.ui.components
 
 import android.content.SharedPreferences
 import androidx.compose.foundation.layout.Column
@@ -11,7 +11,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import breakpoint.app.R
+import scroll.guard.app.R
 import androidx.core.content.edit
 
 @Composable

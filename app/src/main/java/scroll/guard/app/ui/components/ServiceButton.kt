@@ -1,4 +1,4 @@
-package breakpoint.app.ui.components
+package scroll.guard.app.ui.components
 
 import android.content.Context
 import android.content.Intent
@@ -16,7 +16,7 @@ fun ServiceButton(context: Context, isServiceEnabled: Boolean) {
     Button(
         onClick = {
             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             })
         },
         colors = ButtonDefaults.buttonColors(

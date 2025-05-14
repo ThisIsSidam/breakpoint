@@ -1,8 +1,8 @@
-package breakpoint.app.core.utils
+package scroll.guard.app.core.utils
 
 import android.content.Context
 import android.content.Intent
-import breakpoint.app.core.extensions.toast
+import scroll.guard.app.core.extensions.toast
 import androidx.core.net.toUri
 
 class AppUtils {

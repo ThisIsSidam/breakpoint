@@ -1,4 +1,4 @@
-package breakpoint.app.ui.components
+package scroll.guard.app.ui.components
 
 import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
@@ -16,14 +16,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import breakpoint.app.R
-import breakpoint.app.core.utils.AppUtils
+import scroll.guard.app.R
+import scroll.guard.app.core.utils.AppUtils
 
 @Composable
 fun GithubIcon(context: Context, modifier: Modifier) {
     IconButton(
         onClick = {
-            AppUtils.openUrl(context, "https://github.com/ThisIsSidam/breakpoint")
+            AppUtils.Companion.openUrl(context, "https://github.com/ThisIsSidam/breakpoint")
         },
         modifier = modifier.size(32.dp)
     ) {

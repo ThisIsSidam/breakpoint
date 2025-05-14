@@ -1,4 +1,4 @@
-package breakpoint.app.ui.theme
+package scroll.guard.app.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

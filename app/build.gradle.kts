@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "breakpoint.app"
+    namespace = "scroll.guard.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "breakpoint.app"
+        applicationId = "scroll.guard.app"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
