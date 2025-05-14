@@ -23,7 +23,7 @@ import scroll.guard.app.core.utils.AppUtils
 fun GithubIcon(context: Context, modifier: Modifier) {
     IconButton(
         onClick = {
-            AppUtils.Companion.openUrl(context, "https://github.com/ThisIsSidam/breakpoint")
+            AppUtils.Companion.openUrl(context, "https://github.com/ThisIsSidam/scroll-guard")
         },
         modifier = modifier.size(32.dp)
     ) {
