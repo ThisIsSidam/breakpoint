@@ -13,14 +13,14 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
 
-        <service android:name="scroll.guard.app.core.services.ScrollGuardService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+        <service android:name="de.scroll.app.core.services.ScrollGuardService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
             <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_service_config"/>
         </service>
         <activity
-            android:name="scroll.guard.app.MainActivity"
+            android:name="de.scroll.app.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MyApplication">
             <intent-filter>

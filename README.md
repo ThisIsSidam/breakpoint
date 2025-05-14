@@ -1,7 +1,7 @@
-# Scroll Guard 🛡️  
+# Descroll ️  
 **Break free from doomscrolling.**
 
-Scroll Guard is a mobile tool designed to end **YouTube Shorts** and **Instagram Reels** scrolling addiction. Built for those looking to reclaim their time and attention.
+Descroll is a mobile tool designed to end **YouTube Shorts** and **Instagram Reels** scrolling addiction. Built for those looking to reclaim their time and attention.
 
 ---
 
@@ -24,7 +24,7 @@ Since these type of apps use accessibility service, it is quite hard to trust th
   I can and may add support for more apps. You are also free to fork or raise a pull request for any support you want.
 
 - 🎯 **Single-Short Viewing Mode**  
-  Watch one short at a time—Scroll Guard will block additional scrolling and prevent endless content feeds from taking over.
+  Watch one short at a time—Descroll will block additional scrolling and prevent endless content feeds from taking over.
 
 - ⏳ **Custom Limits**  
   Set time-based or scroll-based limits to guide intentional usage and build healthier habits. (Thinking about this)

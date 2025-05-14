@@ -14,11 +14,11 @@ val keyProperties = Properties().apply {
 }
 
 android {
-    namespace = "scroll.guard.app"
+    namespace = "de.scroll.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "scroll.guard.app"
+        applicationId = "de.scroll.app"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
