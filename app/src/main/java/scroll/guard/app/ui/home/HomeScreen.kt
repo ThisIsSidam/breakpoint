@@ -27,7 +27,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import scroll.guard.app.core.services.NoScrollAccessibilityService
+import scroll.guard.app.core.services.ScrollGuardService
 import scroll.guard.app.ui.components.AppVersionText
 import scroll.guard.app.ui.components.GithubIcon
 import scroll.guard.app.ui.components.HomeHeadline
@@ -94,7 +94,7 @@ fun HomeScreen() {
 }
 
 fun isAccessibilityServiceEnabled(context: Context): Boolean {
-    val service = ComponentName(context, NoScrollAccessibilityService::class.java)
+    val service = ComponentName(context, ScrollGuardService::class.java)
     val enabledServicesSetting = Settings.Secure.getString(
         context.contentResolver,
         Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES

@@ -8,7 +8,7 @@ import android.view.accessibility.AccessibilityNodeInfo
 import scroll.guard.app.core.exceptions.Failure
 import scroll.guard.app.core.extensions.toast
 
-class NoScrollAccessibilityService : AccessibilityService() {
+class ScrollGuardService : AccessibilityService() {
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         if (event == null) return
